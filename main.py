@@ -91,8 +91,8 @@ def run_onliner():
             ws, heartbeat = establish_connection(usertoken, status)
             update_status(ws, usertoken, status)
 
-            # Wait for 60 seconds before updating the status again
-            time.sleep(60)
+            # Wait for 30 minutes before updating the status again
+            time.sleep(30 * 60)
         except websocket.WebSocketConnectionClosedException:
             print("Connection closed, reconnecting...")
             time.sleep(5)
